@@ -12,7 +12,7 @@ public class PizzaController {
 	Pizza pizza; // to acheve loosly coupling we are using interface fiels autowired
 	
 	@Autowired
-	public PizzaController(@Qualifier("nonVegPizza") Pizza vegPizza) {
+	public PizzaController(Pizza vegPizza) {
 		this.pizza = vegPizza;
 	}
 	
