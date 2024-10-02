@@ -3,11 +3,12 @@ package com.example.SpringAnnotations.service;
 import org.springframework.stereotype.Component;
 
 @Component
-public class VegPizza implements Pizza{
+public class NonVegPizza implements Pizza{
+
 	@Override
 	public String getPizza() {
-		return "Veg cheese Pizza";
+		// TODO Auto-generated method stub
+		return "Non-Veg Pizza";
 	}
 
-	
 }

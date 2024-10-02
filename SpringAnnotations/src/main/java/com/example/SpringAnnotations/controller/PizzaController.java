@@ -1,19 +1,20 @@
 package com.example.SpringAnnotations.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import com.example.SpringAnnotations.service.VegPizza;
+import com.example.SpringAnnotations.service.Pizza;
 
 @Component
 public class PizzaController {
-	@Autowired
-	VegPizza vegPizza;
 	
-//	@Autowired
-//	public PizzaController(VegPizza vegPizza) {
-//		this.vegPizza = vegPizza;
-//	}
+	Pizza pizza; // to acheve loosly coupling we are using interface fiels autowired
+	
+	@Autowired
+	public PizzaController(@Qualifier("nonVegPizza") Pizza vegPizza) {
+		this.pizza = vegPizza;
+	}
 	
 //	@Autowired
 //	public void setPizza(VegPizza pizza) {
@@ -21,7 +22,7 @@ public class PizzaController {
 //	}
 	
 	public String getPiza() {
-		return vegPizza.getPizza();
+		return pizza.getPizza();
 	}
 
 }
