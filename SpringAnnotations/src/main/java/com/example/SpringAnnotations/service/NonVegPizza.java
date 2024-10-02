@@ -2,7 +2,7 @@ package com.example.SpringAnnotations.service;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class NonVegPizza implements Pizza{
 
 	@Override

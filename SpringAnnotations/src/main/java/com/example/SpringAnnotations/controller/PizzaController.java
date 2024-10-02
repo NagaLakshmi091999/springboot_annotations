@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 
 import com.example.SpringAnnotations.service.Pizza;
 
-@Component
+
 public class PizzaController {
 	
 	Pizza pizza; // to acheve loosly coupling we are using interface fiels autowired
 	
-	@Autowired
+	
 	public PizzaController(Pizza vegPizza) {
 		this.pizza = vegPizza;
 	}

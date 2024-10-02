@@ -3,7 +3,6 @@ package com.example.SpringAnnotations.service;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
 @Primary
 public class VegPizza implements Pizza{
 	@Override
