@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.SpringAnnotations.controller.MyController;
 import com.example.SpringAnnotations.controller.PizzaController;
+import com.example.SpringAnnotations.lazy.LazyLoader;
 import com.example.SpringAnnotations.repository.MyRepository;
 import com.example.SpringAnnotations.service.MyService;
 import com.example.SpringAnnotations.service.VegPizza;
@@ -22,6 +23,7 @@ public class SpringAnnotationsApplication {
 		System.out.println(myservice.hello());
 		MyRepository repo = context.getBean(MyRepository.class);
 		System.out.println(repo.hello());
+		LazyLoader lay =context.getBean(LazyLoader.class);
 //		VegPizza vegPizza = context.getBean(VegPizza.class);
 //		System.out.println(vegPizza.getPizza());
 	}
