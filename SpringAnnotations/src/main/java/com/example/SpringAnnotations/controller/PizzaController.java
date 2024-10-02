@@ -24,5 +24,12 @@ public class PizzaController {
 	public String getPiza() {
 		return pizza.getPizza();
 	}
-
+	
+	public void init() {
+		System.out.println("initialization");
+	}
+	
+	public void destroy() {
+		System.out.println("destruction");
+	}
 }
